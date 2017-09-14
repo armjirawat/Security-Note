@@ -4,12 +4,15 @@ Things to do after install kali linux
 apt-get update && apt-get upgrade -y && apt-get dist-upgrade
 apt-get install alsa-utils -y
 dpkg-reconfigure tzdata
+
+install font from Font.zip
+Open firefox select language and font
+
 passwd
 apt-get clean
 
-=== Build Cache Metasploit ===
+--- Build Cache Metasploit ---
 service postgresql restart
 msfdb init
 msfconsole
 msf > db_rebuild_cache
-==============================
