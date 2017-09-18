@@ -1,6 +1,6 @@
-=======================================
-Things to do after install kali linux
-=======================================
+================================================
+Things to do after install kali linux VM Version
+================================================
 apt-get update && apt-get upgrade -y && apt-get dist-upgrade
 apt-get install alsa-utils -y
 dpkg-reconfigure tzdata
@@ -16,3 +16,28 @@ service postgresql restart
 msfdb init
 msfconsole
 msf > db_rebuild_cache
+
+===========================================================
+Things to do after install kali linux raspberry pi version
+===========================================================
+apt-get update && apt-get upgrade -y && apt-get dist-upgrade
+apt-get install alsa-utils -y
+apt-get install nmon
+apt-get install gparted
+dpkg-reconfigure tzdata
+
+install font from Font.zip
+Open firefox select language and font
+
+passwd
+apt-get clean
+
+gparted - To increase sd card space and create swap partition
+
+Create a swap file
+------------------
+nano /etc/fstab
+# insert 
+/dev/mmcblkXXXX none swap sw 0 0       
+
+
