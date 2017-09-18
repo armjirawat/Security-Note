@@ -40,4 +40,11 @@ nano /etc/fstab
 # insert 
 /dev/mmcblkXXXX none swap sw 0 0       
 
+Install font
+----------------
+unzip Font.zip
+cp * /usr/share/fonts
+cp * /usr/local/share/fonts
+fc-cache -fv
 
+select fonr in firefox
