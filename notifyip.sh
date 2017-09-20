@@ -1,8 +1,9 @@
 #!/bin/bash
 ################################################################################
 # Enable line notify service and get token from https://notify-bot.line.me/en/
-# To make script run on boot crontab -e
-# @reboot /path-to-script/notifyip.sh
+# To make script run on boot add /etc/rc.local
+# #!/bin/bash -e
+# /path-to-script/notifyip.sh
 # Scripted by Hades
 ################################################################################
 function sendline
