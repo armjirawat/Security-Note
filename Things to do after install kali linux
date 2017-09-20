@@ -1,0 +1,50 @@
+================================================
+Things to do after install kali linux VM Version
+================================================
+1 apt-get update && apt-get upgrade -y && apt-get dist-upgrade
+2 apt-get install alsa-utils -y
+3 dpkg-reconfigure tzdata
+4 passwd
+5 apt-get clean
+
+install font from Font.zip
+Open firefox select language and font
+
+--- Build Cache Metasploit ---
+service postgresql restart
+msfdb init
+msfconsole
+msf > db_rebuild_cache
+
+===========================================================
+Things to do after install kali linux raspberry pi version
+===========================================================
+1 apt-get update && apt-get upgrade -y && apt-get dist-upgrade
+2 apt-get install alsa-utils -y
+3 apt-get install nmon
+4 apt-get install gparted
+5 dpkg-reconfigure tzdata
+6 passwd
+7 apt-get clean
+8 gparted - To increase sd card space and create swap partition
+
+Create a swap file
+------------------
+1 nano /etc/fstab
+2# insert 
+/dev/mmcblkXXXX none swap sw 0 0       
+
+Install font
+----------------
+1 unzip Font.zip
+2 cp * /usr/share/fonts
+3 cp * /usr/local/share/fonts
+4 fc-cache -fv
+5 select font in firefox
+
+enable ssh service on reboot
+-----------------
+1 nano /etc/ssh/sshd_confg 
+#Permit Rootlogin No 
+2 update-rc.d ssh enable
+3 service ssh restart
