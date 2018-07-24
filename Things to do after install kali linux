@@ -29,6 +29,10 @@ apt-get install docker-engine
 service docker start
 -------------
 
+Install MobSF
+docker pull opensecurity/mobile-security-framework-mobsf
+docker run -it -p 8000:8000 opensecurity/mobile-security-framework-mobsf:latest
+
 --- Build Cache Metasploit ---
 service postgresql restart
 msfdb init
