@@ -39,6 +39,35 @@ msfdb init
 msfconsole
 msf > db_rebuild_cache
 
+
+---- Install Go and Slurp Linux ----------
+apt-get update
+apt install golang upx-ucl -y
+git clone https://github.com/armjirawat/slurp.git
+cd slurp
+go get github.com/CaliDog/certstream-go
+go get github.com/Sirupsen/logrus
+go get github.com/Workiva/go-datastructures/queue
+go get github.com/jmoiron/jsonq
+go get github.com/joeguo/tldextract
+go get github.com/spf13/cobra
+go get golang.org/x/net/idna
+go run main.go keyword -t test
+
+---- Install Go and Slurp Windows ----------
+https://golang.org/doc/install?download=go1.10.3.windows-amd64.msi
+https://git-scm.com/download/win
+git clone https://github.com/armjirawat/slurp.git
+cd slurp
+go get github.com/CaliDog/certstream-go
+go get github.com/Sirupsen/logrus
+go get github.com/Workiva/go-datastructures/queue
+go get github.com/jmoiron/jsonq
+go get github.com/joeguo/tldextract
+go get github.com/spf13/cobra
+go get golang.org/x/net/idna
+go run main.go keyword -t test
+
 ===========================================================
 Things to do after install kali linux raspberry pi version
 ===========================================================
