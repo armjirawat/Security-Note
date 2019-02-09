@@ -100,3 +100,32 @@ enable ssh service on reboot
 #Permit Rootlogin No 
 2 update-rc.d ssh enable
 3 service ssh restart
+
+
+==================================
+Incase cannot update 
+Credits: https://forums.kali.org/archive/index.php/t-33399.html
+==================================
+Your /etc/sources.list should be:
+
+deb http://http.kali.org/kali kali-rolling main contrib non-free
+# For source package access, uncomment the following line
+# deb-src http://http.kali.org/kali kali-rolling main contrib non-free
+
+However if the above official source not working to you, you may use the official kali mirrors.
+1) Go to this link http://http.kali.org/README.mirrorlist
+2) under "mirrors which handle this country" copy any one of the link (example in my case: http://kali.cs.nctu.edu.tw/kali/README )
+3) Open nano /etc/apt/sources.list and paste it at the bottom.
+4) Remove "/README" from the link and make it looks like this -> "deb http://kali.cs.nctu.edu.tw/kali kali-rolling main contrib non-free"
+5) Comment all previous sources except the mirror that you just pasted.
+6) and finally your Mirror sources.list should be like this: (Example of my kali mirror sources.list)
+
+#Kali Linux Rolling Official Repositories
+#deb http://http.kali.org/kali kali-rolling main contrib non-free
+
+#Kali Linux Rolling Official Mirrors Repositories
+deb http://kali.cs.nctu.edu.tw/kali kali-rolling main contrib non-free
+
+7) Exit and write changes.
+8) Run apt-get clean && apt-get update and see if it works.
+9) If it still doesn't working, try to replace it with another mirror.
